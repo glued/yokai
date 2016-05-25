@@ -16,6 +16,6 @@ pids
 # Dependency directory
 node_modules
 npm-debug.log
-.icedtearc
+.yokairc
 
 www

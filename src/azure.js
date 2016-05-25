@@ -4,6 +4,7 @@ const azure = require('azure-storage')
 function createContainer(blobService, bucket){
   return new Promise((resolve, reject) =>{
     const config = { publicAccessLevel: 'blob' }
+    if(!bucket) resolve()
     blobService.createContainerIfNotExists(bucket, config, (err, result, response) => {
         if(err){
           console.log('unable to create container', err, result, response)
@@ -16,6 +17,7 @@ function createContainer(blobService, bucket){
 
 function uploadAzureFile(blobService, bucket, folder, file){
   return new Promise((resolve, reject) => {
+
     let regex = new RegExp(`.*(${folder}/)`)
     let blobName = file.replace(regex, '')
     blobName = blobName.replace(/\s+/g, '-')
@@ -29,7 +31,11 @@ function uploadAzureFile(blobService, bucket, folder, file){
 
 module.exports = (files, config, folder) => {
   const blobService = azure.createBlobService(config.account, config.key)
-  const bucket = config.bucket
+  const bucket = config.bucket || '$root'
+  if(!config.bucket){
+    //will need to create containers outside of root
+  }
+
   return createContainer(blobService, bucket)
     .then(() => {
       let uploads = files.map(file => uploadAzureFile(blobService, bucket, folder, file))

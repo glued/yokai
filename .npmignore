@@ -2,5 +2,6 @@ www
 images
 test
 node_modules
-.icedtearc
+.yokairc
 .eslintrc
+azure.md
