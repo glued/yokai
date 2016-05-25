@@ -36,4 +36,11 @@ Note that Azure blob storage [does not have a default document](https://feedback
       - **URL Rewrite** - source `((?:[^\?]*/)?)($|\?.*)` destination `$1index.html$2`
       - **URL Rewrite** - source `((?:[^\?]*/)?[^\?/.]+)($|\?.*)` destination `$1.html$2`
 
-The CDN takes time to populate, may take up to 4 hours, but I hope this helps.
+The CDN takes time to populate, may take up to 4 hours.
+
+#### V. COMPRESSION
+Enable compression from the edgecast console:
+
+![compress](images/compress.png)
+
+#### VI. CNAME
