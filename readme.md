@@ -34,6 +34,6 @@ so, if your compiled build folder is `www` it would be `yokai deploy-azure www`
 
 If no azure container is specified one will be created in the root via `$root`
 
-You can remove a container with `teardown-azure [container]`
+You can remove a container with `yokai teardown-azure [container]`
 
 Here is a [guide to configure Azure blob storage and CDN](azure.md)
