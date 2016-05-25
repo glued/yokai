@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+.idea
+*Thumbs.db
+*.DS_Store
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+node_modules
+npm-debug.log
+.icedtearc
+
+www
