@@ -33,7 +33,7 @@ Note that Azure blob storage [does not have a default document](https://feedback
 
   - add a new rule **IF Always**
      - **Feature**
-      - **URL Rewrite** - source `((?:[^\?]*/)?)($|\?.*)` destination `$1/index.html$2`
+      - **URL Rewrite** - source `((?:[^\?]*/)?)($|\?.*)` destination `$1index.html$2`
       - **URL Rewrite** - source `((?:[^\?]*/)?[^\?/.]+)($|\?.*)` destination `$1.html$2`
 
-Hope this helps
+The CDN takes time to populate, may take up to 4 hours, but I hope this helps.
