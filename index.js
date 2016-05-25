@@ -2,7 +2,7 @@
 const program       = require('commander')
 const path          = require('path')
 const initAction    = require('./src/init')
-const deployAction  = require('./src/deploy')
+const action        = require('./src/action')
 const projectPath   = path.resolve(process.cwd(), '')
 const CONFIG_NAME   = '.yokairc'
 
@@ -14,14 +14,12 @@ program
 program
   .command('deploy-azure [folder]')
   .usage('deploy a folder to azure')
-  .action(folder => deployAction(projectPath, folder, CONFIG_NAME))
+  .action(folder => action.deployAzure(projectPath, CONFIG_NAME, folder))
 
 program
   .command('teardown-azure [container]')
-  .usage('remove an azure blob by name')
-  .action(container => {
-    //todo
-  })
+  .usage('remove an azure container by name')
+  .action(container => action.removeAzureContainer(projectPath, CONFIG_NAME, container))
 
 program.parse(process.argv)
 
