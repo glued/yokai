@@ -3,7 +3,7 @@ Static website deployments for Azure blob and CDN
 
 Support for S3 and Google cloud coming soon
 
-[![npm version](https://badge.fury.io/js/icedtea.svg)](https://badge.fury.io/js/icedtea)
+[![npm version](https://badge.fury.io/js/yokai.svg)](https://badge.fury.io/js/yokai)
 
 `npm install yokai -g` install global to access from any project
 
@@ -21,6 +21,9 @@ Support for S3 and Google cloud coming soon
     "secretAccessKey": "",
     "region": "",
     "Bucket": ""
+  },
+  "google": {
+
   }
 }
 
