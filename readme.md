@@ -30,7 +30,10 @@ Support for S3 and Google cloud coming soon
 ```
 
 After a `.yokairc` is created, you can deploy given that Azure is setup correctly via `yokai deploy-azure [folder]`
-
 so, if your compiled build folder is `www` it would be `yokai deploy-azure www`
+
+If no azure container is specified one will be created in the root via `$root`
+
+You can remove a container with `teardown-azure [container]`
 
 Here is a [guide to configure Azure blob storage and CDN](azure.md)
