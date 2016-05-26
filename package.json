@@ -1,6 +1,6 @@
 {
   "name": "yokai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Richard Worsfold",
   "license": "MIT",
   "description": "Deploy a static website to Azure container storage",
